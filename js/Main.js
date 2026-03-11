@@ -1,4 +1,33 @@
-// ── SCROLL REVEAL ──
+// ── SCREEN SHOWCASE TABS ──
+const BASE = 'https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/';
+const tabs = document.querySelectorAll('.stab');
+const showcaseImg = document.getElementById('showcaseImg');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Update active tab
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Fade image
+    const screen = tab.dataset.screen;
+    const img = tab.dataset.img;
+
+    showcaseImg.classList.add('fading');
+    setTimeout(() => {
+      showcaseImg.src = BASE + img;
+      showcaseImg.alt = screen;
+      showcaseImg.classList.remove('fading');
+    }, 200);
+
+    // Update info panel
+    document.querySelectorAll('.sinfo').forEach(p => p.classList.remove('active'));
+    const panel = document.querySelector(`.sinfo[data-screen="${screen}"]`);
+    if (panel) panel.classList.add('active');
+  });
+});
+
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(el => {
     if (el.isIntersecting) {

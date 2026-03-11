@@ -28,7 +28,7 @@
   <div class="hero-content">
     <div class="hero-eyebrow">BSc Interactive Computing · Ulster University</div>
     <h1>Building apps<br>that <span class="highlight">actually</span><br>matter.</h1>
-    <p class="hero-desc">I'm Adrian Dallas — a developer focused on creating intuitive, full-stack mobile experiences. Currently building Coaching Hub, a unified fitness platform that ends app fatigue.</p>
+    <p class="hero-desc">I'm Adrian Dallas — a developer focused on creating intuitive, full-stack mobile/web experiences. Currently building Coaching Hub, a unified fitness platform that ends app fatigue.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects ↓</a>
       <a href="#contact" class="btn-ghost">Get in touch</a>
@@ -78,7 +78,7 @@
     <div class="stat-label">Integrations</div>
   </div>
   <div class="stat-item">
-    <div class="stat-number">3<span>rd</span></div>
+    <div class="stat-number">4<span>th</span></div>
     <div class="stat-label">Year Student</div>
   </div>
   <div class="stat-item">
@@ -93,7 +93,7 @@
   <div class="featured-grid">
     <div class="reveal">
       <div class="featured-badge">🏆 Final Year Project · COM668</div>
-      <h2 class="featured-title">Coaching Hub<br>/ FFF App</h2>
+      <h2 class="featured-title">Coaching Hub</h2>
       <p class="featured-desc">
         A cross-platform mobile app that solves fitness "app fatigue" — consolidating workout tracking, nutrition logging, real-time health metrics, and a community newsfeed into a single, intuitive dashboard. Integrates with Apple Health, Google Fit, MyFitnessPal, ExerciseDB and more.
       </p>
@@ -112,67 +112,159 @@
         <span class="tech-tag">NativeBase</span>
       </div>
       <div class="project-links">
-        <a href="https://github.com/B00902149/FFFApp" target="_blank" class="btn-primary">View GitHub →</a>
-        <a href="https://youtu.be/B0vKgBGfV-c" target="_blank" class="btn-ghost">▶ Watch Demo</a>
+        <a href="https://github.com/B00902149/CHApp" target="_blank" class="btn-primary">View GitHub →</a>
+        <a href="https://coachinghub.fit/" target="_blank" class="btn-ghost">▶ View Website</a>
       </div>
     </div>
 
-    <!-- Real screenshots + demo -->
-    <div class="fff-media reveal">
+    <!-- Screen Showcase -->
+    <div class="screen-showcase reveal">
 
-      <!-- YouTube embed -->
-      <div class="fff-video-wrap">
-        <div class="fff-video-label">▶ Demo Video</div>
-        <div class="fff-video-container">
-          <iframe
-            src="https://www.youtube.com/embed/B0vKgBGfV-c"
-            title="FFF App Demo"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Screenshot strip -->
-      <div class="fff-screenshots">
-        <div class="fff-ss-label">📱 Screenshots</div>
-        <div class="fff-ss-strip">
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Signup.png" alt="Sign Up" />
-            <span>Sign Up</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Dashboard.png" alt="Dashboard" />
-            <span>Dashboard</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/MyHealth.png" alt="My Health" />
-            <span>My Health</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Exercise.png" alt="Exercise" />
-            <span>Exercise</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Nutrition.png" alt="Nutrition" />
-            <span>Nutrition</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Community.png" alt="Community" />
-            <span>Community</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Profile.png" alt="Profile" />
-            <span>Profile</span>
-          </div>
-          <div class="fff-ss-item">
-            <img src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/ExerciseDemo.png" alt="Exercise Demo" />
-            <span>Exercise Demo</span>
+      <!-- Phone display -->
+      <div class="showcase-phone">
+        <div class="showcase-phone-frame">
+          <div class="showcase-notch"></div>
+          <div class="showcase-screen">
+            <img id="showcaseImg"
+              src="https://raw.githubusercontent.com/B00902149/FFFApp/main/screenshots/Dashboard.png"
+              alt="Dashboard" />
           </div>
         </div>
       </div>
 
+      <!-- Screen selector + info panel -->
+      <div class="showcase-panel">
+
+        <!-- Screen tabs -->
+        <div class="showcase-tabs">
+          <button class="stab active" data-screen="Dashboard" data-img="Dashboard.png">Dashboard</button>
+          <button class="stab" data-screen="My Health" data-img="MyHealth.png">My Health</button>
+          <button class="stab" data-screen="Workouts" data-img="Exercise.png">Workouts</button>
+          <button class="stab" data-screen="Exercise Library" data-img="Search.png">Exercise Library</button>
+          <button class="stab" data-screen="Exercise Detail" data-img="ExerciseDemo.png">Exercise Detail</button>
+          <button class="stab" data-screen="Nutrition" data-img="Nutrition.png">Nutrition</button>
+          <button class="stab" data-screen="Weekly Macros" data-img="Macros.png">Weekly Macros</button>
+          <button class="stab" data-screen="Community" data-img="Community.png">Community</button>
+          <button class="stab" data-screen="Share a Post" data-img="AddPost.png">Share a Post</button>
+        </div>
+
+        <!-- Info panels — one per screen -->
+        <div class="showcase-info">
+
+          <div class="sinfo active" data-screen="Dashboard">
+            <div class="sinfo-title">Dashboard</div>
+            <p class="sinfo-desc">Your command centre. Displays a personalised welcome, today's workout and nutrition summary, and quick-access tiles to every section of the app.</p>
+            <ul class="sinfo-features">
+              <li>Daily quote card fetched from Bible API</li>
+              <li>Today's workout tile — pulls active workout plan from MongoDB</li>
+              <li>Calories logged summary from Nutrition module</li>
+              <li>Quick-nav tiles: My Health, Exercise, Nutrition, Community</li>
+              <li>Personalised greeting using authenticated user's name</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="My Health">
+            <div class="sinfo-title">My Health</div>
+            <p class="sinfo-desc">A live metrics overview pulling real data from connected health APIs. Users can log, edit, and track key health indicators over time.</p>
+            <ul class="sinfo-features">
+              <li>Weight, sleep, BPM, activity, and nutrition tiles</li>
+              <li>Data synced from Apple Health / Google Fit via Health Connect</li>
+              <li>Tap any metric to view historical entries and trends</li>
+              <li>Add new entries — stored in MongoDB with timestamp</li>
+              <li>Edit and delete individual records</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Workouts">
+            <div class="sinfo-title">Workouts</div>
+            <p class="sinfo-desc">Structured workout tracking screen. Displays the active training plan with sets, reps, and weight logging for each exercise in the session.</p>
+            <ul class="sinfo-features">
+              <li>Workout plan loaded dynamically from MongoDB</li>
+              <li>Section list: Warm Up and Main Exercises</li>
+              <li>Input fields for sets, reps, and weight per exercise</li>
+              <li>Play button navigates to Exercise Detail for video demo</li>
+              <li>Completion triggers rating + post to Community feed</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Exercise Library">
+            <div class="sinfo-title">Exercise Library</div>
+            <p class="sinfo-desc">Searchable database of exercises. Filter by name, muscle group, or equipment type. Results show average user ratings pulled from MongoDB.</p>
+            <ul class="sinfo-features">
+              <li>Real-time search bar with live filtering</li>
+              <li>Filter by muscle group: Push / Pull / Legs / Core / Cardio</li>
+              <li>Star ratings averaged across all user submissions</li>
+              <li>Each result links to full Exercise Detail screen</li>
+              <li>Add any exercise to a custom workout plan</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Exercise Detail">
+            <div class="sinfo-title">Exercise Detail</div>
+            <p class="sinfo-desc">In-depth view of an individual exercise. Includes a video demonstration, step-by-step instructions, and an option to add to your current workout.</p>
+            <ul class="sinfo-features">
+              <li>Video demo via expo-av with play/pause controls</li>
+              <li>Numbered how-to instructions from exercise database</li>
+              <li>Pre-training notes and muscle group tags</li>
+              <li>Add to Workout button — updates active plan in MongoDB</li>
+              <li>Back navigation returns to Exercise Library or Workouts</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Nutrition">
+            <div class="sinfo-title">Nutrition</div>
+            <p class="sinfo-desc">Daily nutrition tracker with meal-by-meal logging. Search the USDA food database and log items to breakfast, lunch, dinner, or snacks.</p>
+            <ul class="sinfo-features">
+              <li>Date navigation — view any day's intake history</li>
+              <li>Calorie progress bar vs. daily target</li>
+              <li>Meal sections: Breakfast, Lunch, Dinner, Snacks</li>
+              <li>USDA Food Database API for food search and kcal data</li>
+              <li>Add, edit, and remove food entries stored in MongoDB</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Weekly Macros">
+            <div class="sinfo-title">Weekly Macros</div>
+            <p class="sinfo-desc">A weekly overview of macro and calorie intake. Visual charts let users see patterns in their nutrition across the full week at a glance.</p>
+            <ul class="sinfo-features">
+              <li>7-day calorie summary with daily breakdown</li>
+              <li>Protein, carbs, and fat totals for the week</li>
+              <li>Progress bars vs. user-set weekly targets</li>
+              <li>Data aggregated from daily Nutrition logs in MongoDB</li>
+              <li>Highlights days where targets were hit or missed</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Community">
+            <div class="sinfo-title">Community</div>
+            <p class="sinfo-desc">A social newsfeed where users share workouts, progress updates, and motivational posts. Modelled on a Facebook-style feed backed by MongoDB.</p>
+            <ul class="sinfo-features">
+              <li>Scrollable feed of most recent community posts</li>
+              <li>Posts include user avatar, name, text, and timestamp</li>
+              <li>Filter feed by most recent or most liked</li>
+              <li>Coach and admin notifications on workout completions</li>
+              <li>Tap post to view full detail or add a reaction</li>
+            </ul>
+          </div>
+
+          <div class="sinfo" data-screen="Share a Post">
+            <div class="sinfo-title">Share a Post</div>
+            <p class="sinfo-desc">Create and publish a post to the Community feed. Attach workout ratings, photos, or a text update. Posts are saved to MongoDB and appear instantly in the feed.</p>
+            <ul class="sinfo-features">
+              <li>Text input with character limit for post body</li>
+              <li>1–5 star workout rating component</li>
+              <li>Optional image attachment from device camera roll</li>
+              <li>Post saved to MongoDB with user ID and timestamp</li>
+              <li>Coach and friends notified via push notification</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Demo link -->
+        <a href="https://youtu.be/Ksfxh4NRMzQ" target="_blank" class="btn-ghost" style="margin-top:1.5rem; display:inline-flex">▶ Watch Full Demo</a>
+
+      </div>
     </div>
   </div>
 
@@ -441,7 +533,7 @@
         </div>
         <div class="about-detail">
           <span class="about-detail-label">Focus</span>
-          <span class="about-detail-value">Mobile · Full-Stack · UX</span>
+          <span class="about-detail-value">React · Full-Stack · Front-end</span>
         </div>
         <div class="about-detail">
           <span class="about-detail-label">Status</span>
@@ -470,14 +562,14 @@
   <div class="contact-card reveal">
     <div class="section-label" style="justify-content:center">Contact</div>
     <h2 class="section-title" style="font-size:2rem">Let's build something.</h2>
-    <p style="color:var(--muted); font-size:0.95rem; margin-top:0.5rem">Open to internships, collaborations, and graduate roles.</p>
+    <p style="color:var(--muted); font-size:0.95rem; margin-top:0.5rem">Open to work.</p>
     <a href="/cdn-cgi/l/email-protection#d79ab494a5b2b6fa96e6e697a2bba4a3b2a5f9b6b4f9a2bc" class="contact-email"><span class="__cf_email__" data-cfemail="3a775979485f5b177b0b0b7a4f56494e5f48145b59144f51">[email&#160;protected]</span></a>
     <div class="social-links">
       <a href="#" class="social-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
         GitHub
       </a>
-      <a href="https://www.linkedin.com" class="social-link">
+      <a href="https://www.linkedin.com/in/adriandallas1995/" class="social-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
